@@ -1,0 +1,71 @@
+#include<iostream.h>
+	#include<conio.h>
+	int i;
+	class information
+	{     
+	public:
+	char Name[30];
+	long int sal,age,dgt,sum,tot;
+	void read();
+	void set();
+	void show();
+	};
+	void read::input()
+	{
+	cout<<"Enter Name:\t";
+	cin>>name;
+	cout<<"Enter salary:\t";
+	cin>>sal;
+	cout<<"Enter total number of daughters:\t";
+	cin>>dgt;
+	cout<<"Enter age:\t";
+	cin>>age;
+	}
+	void information::set()
+	{
+	    sum=0;
+	if(dgt>1)
+	{
+	sum=sum+10;
+	}
+	if(sal>30000)
+	{
+	sum=sum+15;
+	}
+	if(age>=40)
+	{
+	sum=sum+30;
+	}
+	tot=(sal*sum)/100;
+	 cout<<"Salary increased:\t"<<total;
+	}
+	void information::show()
+	{
+	cout<<"\t\n name="<<name;
+	cout<<"\t\n salary="<<sal;
+	cout<<"\t\n Number of daughters: "<<dgt;
+	cout<<"\t\n age="<<age;
+	cout<<"\t\n increase="<<tot;
+	}
+	void main()
+	{
+	  clrscr();
+	information m[20];
+	int no;
+	cout<<"Enter total number of numbers:";
+	cin>>no;
+	for(i=0;i<no;i++)
+	{
+	   m[i].read();
+	}
+	for(i=0;i<no;i++)
+	{
+	   m[i].set();
+	}
+	cout<<"do you want display";
+	for(i=0;i<no;i++)
+	{
+	    m[i].show();
+	}
+	getch();
+	}
