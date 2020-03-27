@@ -1,0 +1,50 @@
+	#include <stdio.h>
+	#include<conio.h>
+	#include<iostream>
+	#include<string>
+	using namespace std;
+	int main()
+	{
+	    string array;
+	    getline(cin,array);
+	    int size=array.size(),i=0,maxim=0,wrd=0,lc=0,t[size],sc=0;
+	    while(i<size)
+	     {
+	      if(array[j]==' '||j==(size-1))
+	       { 
+	           t[wrd]=j-lc;
+	           if(wrd>0)
+	           t[wrd]=j-lc+1;
+	           wrd++;
+	           lc=0;
+	           sc++;
+	       }
+	      j++;
+	      lc++;
+	     }
+	     int s[wrd];
+	     for(j=1;j<wrd;j++)
+	     {
+	         s[j-1]=t[j]-t[j-1]-1;
+	     }
+	     s[wrd-1]=array.size()-t[wrd-1];
+	     int loc,loc1;
+	     cout<<"\n";
+	     for(j=0;j<wrd;j++)
+	      {
+	          for(int k=0;k<wrd;k++)
+	           {
+	               if(s[k]>maxim)
+	               { 
+	                   maxim=s[k];
+	                   loc=t[k];
+	                   loc1=k;
+	               }
+	           } 
+	          cout<<array.substr(loc,maxim)<<"\t"; 
+	          s[loc1]=0;
+	          maxim=0;
+	      }
+	    return 0;
+	}
+
