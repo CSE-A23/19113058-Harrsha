@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class RAJA
+{
+    public:
+    void task(int a)
+    {
+        cout<<"Tasks-wash the clothes,";
+    }
+    void task(int b,int c)
+    {
+        cout<<"read,";
+    }
+    void task(int x,int y,int z)
+    {
+        cout<<"Boook two tickets";
+    }
+};
+int main()
+{
+    RAJA r;
+    r.task(1);
+    r.task(1,1);
+    r.task(1,1,1);
+}
