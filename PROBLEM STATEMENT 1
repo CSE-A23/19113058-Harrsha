@@ -1,0 +1,49 @@
+#include<iostream.h>
+using namespace std;
+class bangles
+{
+    public:
+    int size;
+    char color[50],material[100];
+    void input()
+    {
+        cout<<"Enter the size of the pair of bangles\n";
+        cin>>size;
+        cout<<"Enter the colour of the pair of bangles\n";
+        cin>>color;
+        cout<<"Enter the make of the bangles\n";
+        cin>>material;
+    }
+    
+};
+int main()
+{
+    int n,i,j,t;
+    bangles b[100];
+    cout<<"Enter the number of bangles needed\n";
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        b[i].input();
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(b[i].size>b[j].size)
+            {
+                t=b[i].size;
+                b[i].size=b[j].size;
+                b[j].size=t;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+       cout<<b[i].size<<b[i].color<<b[i].material<<"\n";
+    }
+    for(i=0;i>n-1;i--)                                
+    {
+       cout<<b[i].size<<b[i].color<<b[i].material<<"\n";
+    }
+}
