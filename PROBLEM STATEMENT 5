@@ -1,0 +1,35 @@
+#include<iostream>
+	#include<stdio.h>
+	#include<conio.h>
+	using namespace std;
+	class distance
+	{
+	    public:
+	        float km,metre;
+	    float conversion(float a)
+	    {
+	        return a/1000;
+	    }
+	    void rope(float x,float y)
+	    {
+	        cout<<"\nAdding="<<x+y;
+	        cout<<"\nSubtract="<<x-y;
+	    }
+	    friend void rope(float x,float y);
+	}D;
+	
+
+	
+
+	int main()
+	{
+	    float metre1,metre2,l,p;
+	    cout<<"Enter the metre-1 and metre-2\n";
+	    cin>>metre1>>metre2;
+	    l=D.conversion(metre1);
+	    p=D.conversion(metre2);
+	    cout<<l<<" "<<p;
+	    D.rope(l,p);
+	    return 0;
+	}
+
