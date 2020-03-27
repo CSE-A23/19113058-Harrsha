@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<math.h>
+using namespace std;
+main()
+{
+    int n,p;
+    cout<<"Enter the number\n";
+    cin>>n;
+    cout<<"Enter the Power\n";
+    cin>>p;
+    void SuperPower(int n,int p);
+    {
+        int N,x;
+        try
+        {
+            if((n<0)||(p<0))
+            {
+                throw 1;
+            }
+            if((n==0)&&(p==0))
+            {
+                throw 'a';
+            }
+            int total=0;
+            while(n!=0)
+            {
+                N=n%10;
+                x=pow(N,p);
+                total=total+x;
+                n=n/10;
+            }
+            cout<<"Super Power :"<<total;
+            cout<<"\n";
+        }
+        catch(int c)
+        {
+            cout<<"Super Power is applicable only for positive numbers\n";
+        }
+        catch(char d)
+        {
+            cout<<"Zero cannot be a Super Power\n";
+        }
+    }
+}
