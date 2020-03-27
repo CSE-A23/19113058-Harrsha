@@ -1,0 +1,62 @@
+  #include<iostream>
+	using namespace std;
+	class KANNAN
+	{
+	    private:
+	    int age;
+	    protected:
+	    int year;
+	    public:
+	KANNAN()
+	    {
+	        cout<<"Kannan constructor\n";
+	    }
+	    void asset()
+	    {
+	        cout<<"Kannan house\n";
+	    }
+	    ~kannan()
+	    {
+	        cout<<"Kannan destructor\n";
+	    }
+	};
+	class RAM:public KANNAN
+	{
+	    public:
+	    RAM()
+	    {
+	        cout<<"Ram constructor\n";
+	    }
+	    void asset()
+	    {
+	        KANNAN::asset();
+	        cout<<"Kannan house renovated by Ram\n";
+	    }
+	    ~RAM()
+	    {
+	        cout<<"Ram destructor\n";
+	    }
+	};
+	class NARESH:public RAM
+	{
+	    public:
+	    NARESH()
+	    {
+	        cout<<"Naresh constructor\n";
+	    }
+	    void asset()
+	    {
+	        RAM::asset();
+	        cout<<"Kannan house re-renovated by Naresh\n";
+	    }
+	    ~NARESH()
+	    {
+	        cout<<"Naresh destructor\n";
+	    }
+	};
+	int main()
+	{
+	    NARESH obj;
+	    obj.asset();
+	}
+
